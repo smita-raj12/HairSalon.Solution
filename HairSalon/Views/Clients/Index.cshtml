@@ -12,3 +12,4 @@
   <li>@Html.ActionLink($"{c.Name}", "Details", new { id = c.ClientId })</li>
 }
 <p>@Html.ActionLink("Add new Client", "Create")</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
