@@ -1,9 +1,9 @@
 @model HairSalon.Models.Client
 
-<h2>Edit</h2>
+<h3>Edit</h3>
 
-<h4>Edit this task: @Html.DisplayFor(model => model.Name)</h4>
-<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit Name: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Edit Description: @Html.DisplayFor(model => model.Description)</h4>
 
 @using (Html.BeginForm())
 {
@@ -17,3 +17,6 @@
     <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>
+@{
+  Layout = "_Layout";
+}

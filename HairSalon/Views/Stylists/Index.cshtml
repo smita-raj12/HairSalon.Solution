@@ -6,12 +6,15 @@
 {
   <h3>No stylists have been added yet!</h3>
 } 
-  <ul>
-    @foreach(Stylist s in Model)
-    {
-      <li>@Html.ActionLink($"{s.Name}", "Details", new { id = s.StylistId })</li>
-    }
-  </ul>
 
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
+@foreach(Stylist s in Model)
+{
+  <h5>@Html.ActionLink($"{s.Name}", "Details", new { id = s.StylistId })</h5>
+}
+
+<h4>@Html.ActionLink("Add new stylist", "Create")</h4>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+@{
+  Layout = "_Layout";
+}
