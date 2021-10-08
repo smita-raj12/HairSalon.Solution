@@ -6,11 +6,13 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.StylistId)
+  <div class="container">
+    @Html.HiddenFor(model => model.StylistId)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
 
-  <input type="submit" value="Save" />
+    <input type="submit" value="Save" />
+  </div>
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>
