@@ -7,11 +7,20 @@
   <h3>No clients have been added yet!</h3>
 } 
 
-@foreach (Client c in Model)
+else
 {
-  <h4>@Html.ActionLink($"{c.Name}", "Details", new { id = c.ClientId }) <br> Appointment with: @c.Stylist.Name</h4>
-}
+  @using (Html.BeginForm())
+  {
+    <p>Search By name: @Html.TextBox("searchString")
+      <input type="submit" value="Search" /></p>
+  }
 
+  @foreach (Client c in Model)
+  {
+    <h4>@Html.ActionLink($"{c.Name}", "Details", new { id = c.ClientId }) <br> Appointment with: @c.Stylist.Name</h4>
+  }
+
+}
 <h4>@Html.ActionLink("Add new Client", "Create")</h4>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 

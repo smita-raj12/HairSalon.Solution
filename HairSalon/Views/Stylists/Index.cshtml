@@ -7,9 +7,18 @@
   <h3>No stylists have been added yet!</h3>
 } 
 
-@foreach(Stylist s in Model)
+else
 {
-  <h5>@Html.ActionLink($"{s.Name}", "Details", new { id = s.StylistId })</h5>
+  @using (Html.BeginForm())
+  {
+    <p>Search By name: @Html.TextBox("searchString")
+      <input type="submit" value="Search" /></p>
+  }
+
+  @foreach(Stylist s in Model)
+  {
+    <h5>@Html.ActionLink($"{s.Name}", "Details", new { id = s.StylistId })</h5>
+  }
 }
 
 <h4>@Html.ActionLink("Add new stylist", "Create")</h4>
