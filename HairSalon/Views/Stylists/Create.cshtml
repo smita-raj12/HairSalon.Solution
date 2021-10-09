@@ -5,10 +5,11 @@
 {
   <div class="container">
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "text", type = "text", required = "required" })
     <input type="submit" value="Add new stylist" />
   </div>
 }
+
 <p>@Html.ActionLink("Show all stylists", "Index")</p>
 
 @{
