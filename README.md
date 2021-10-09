@@ -53,7 +53,7 @@ Run `dotnet restore` in the git BASH terminal to install dependencies.
    {
       "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid={YOUR_USERNAME_NAME};pwd={YOUR_PASSWORD};"
    }
-}
+ }
 
 6. Remove the {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} and fill in the the code snippet with your username for MySQL, and MySQL password Do not include the curly brackets in your code snippet of appsettings.json
 
