@@ -52,10 +52,11 @@ Run `dotnet restore` in the git BASH terminal to install dependencies.
 
   "ConnectionStrings": {                                                         
     
-      "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid={YOUR-USER-NAME};pwd={YOUR-PASSWORD};"                                  
-  } 
-                                                                          
-}                                                                                                                                                                  
+     "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid={YOUR-USER-NAME};pwd={YOUR-PASSWORD};"   
+
+   } 
+
+ }                                                                                                                                                                  
 6. Remove the {YOUR_USERNAME_NAME} and {YOUR_PASSWORD} and fill in the the code snippet with your username for MySQL, and MySQL password Do not include the curly brackets in your code snippet of appsettings.json
 
 7. Run "dotnet build" in the git BASH terminal to build, and run the project in the terminal. $ dotnet watch run

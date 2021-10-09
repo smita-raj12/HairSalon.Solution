@@ -15,10 +15,14 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    public ActionResult Index()
+    public ActionResult Index(string searchString)
     {
-      List<Stylist> model = _db.Stylists.OrderBy(s => s.Name).ToList();
-      return View(model);
+      IQueryable<Stylist> Stylists = _db.Stylists.OrderBy(s => s.Name);
+      if (!string.IsNullOrEmpty(searchString))
+      {
+        Stylists = Stylists.Where(client => client.Name.Contains(searchString));
+      }                                
+      return View(Stylists.ToList());
     }
     public ActionResult Create()
     {
